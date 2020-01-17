@@ -1,0 +1,37 @@
+.input {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 3rem;
+
+    &__container {
+        display: flex;
+        margin-top: 1.5rem;
+        border-bottom: 1px solid $grey;
+        transition: all 0.2s;
+    }
+    &__icon {
+        align-self: center;
+        margin-right: 1rem;
+        color: $dark-grey;
+    }
+
+    &__input {
+        border: 0;
+        outline: none;
+
+        padding: 1rem 0;
+
+        width: 100%;
+    }
+
+    &__label {
+        font-weight: 600;
+    }
+
+    &--focused .input__icon {
+        color: $black;
+    }
+    &--focused .input__container {
+        border-bottom-color: lighten($black, 20%);
+    }
+}
