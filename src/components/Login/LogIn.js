@@ -1,11 +1,8 @@
 import React from "react"
 import { Input } from "../Input/Input"
 import { MdMail, MdLock, MdPerson } from "react-icons/md"
-import { FaGooglePlusSquare } from "react-icons/fa"
 import { Button } from "../Button/Button"
 import { useForm } from "../../hooks/useForm"
-
-// import { signInWithGoogle } from "../../firebase/firebase"
 
 export const LogIn = () => {
     const { formData, handleChange } = useForm({
@@ -45,13 +42,6 @@ export const LogIn = () => {
             <div className="u-flex u-margin-top-medium">
                 <Button type="submit" color="primary">
                     Вход
-                </Button>
-                <Button
-                    type="submit"
-                    color="red"
-                    //  onClick={signInWithGoogle}
-                >
-                    Войти с помощью <FaGooglePlusSquare size="2rem" />
                 </Button>
             </div>
         </form>
