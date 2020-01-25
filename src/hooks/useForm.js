@@ -9,7 +9,7 @@ const setInitObjectValues = (fields = [], value = "") =>
         {}
     )
 
-export const useForm = ({ fields = [], validators = [] }) => {
+export const useForm = ({ fields = [], validationSchema = {} }) => {
     const [formData, setFormData] = useState(setInitObjectValues(fields, ""))
 
     const handleChange = e => {
@@ -20,5 +20,11 @@ export const useForm = ({ fields = [], validators = [] }) => {
         }))
     }
 
+    // useEffect(() => {
+    //     const validateFormData = async () => {
+    //         console.log(await validationSchema.validate(formData))
+    //     }
+    //     if (validationSchema) validateFormData()
+    // }, [formData])
     return { formData, handleChange }
 }

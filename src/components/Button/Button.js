@@ -1,11 +1,13 @@
 import React from "react"
 import PropTypes from "prop-types"
 
-export const Button = ({ children, type = "regular", ...props }) => {
+export const Button = ({ children, color = "regular", ...props }) => {
     return (
         <button
             {...props}
-            className={`button ${type === "regular" ? "" : `button--${type}`}`}
+            className={`button ${
+                color === "regular" ? "" : `button--${color}`
+            }`}
         >
             {children}
         </button>
@@ -13,5 +15,5 @@ export const Button = ({ children, type = "regular", ...props }) => {
 }
 
 Button.propTypes = {
-    type: PropTypes.oneOf(["regular", "primary"])
+    color: PropTypes.oneOf(["regular", "primary", "red"])
 }
