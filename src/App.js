@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useContext } from "react"
+import React, { useContext } from "react"
 import "./app.scss"
 import { LoginSignup } from "./pages/LoginSignup/LoginSignup"
 import { Header } from "./components/Header/Header"
